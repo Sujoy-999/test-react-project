@@ -8,5 +8,4 @@ const UXHeader = (props) => {
         </div>
     )
 }
-
 export default UXHeader;
