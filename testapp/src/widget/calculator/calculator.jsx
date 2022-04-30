@@ -12,7 +12,7 @@ const Calculator = () =>{
             <UXTextbox value={firstNumber} onEdit={(value) => setFirstNumber(value)}/>
             <UXTextbox value={secondNumber} onEdit={(value) => setSecondNumber(value)}/>
             <UXButton text={"+"} onTap={() => setSummation(+firstNumber + +secondNumber)}/>
-            <UXHeader text={"The Result is: "+summation}/>
+            <UXHeader text={"The Sum is: "+summation}/>
         </div>
     );
 }
