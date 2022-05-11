@@ -2,6 +2,7 @@ import UXHeader from './components/UXHeader/UXHeader';
 import UXButton from './components/UXButton/UXButton';
 import { useState, useReducer } from 'react';
 import './App.css';
+import Calculator from './widget/calculator/calculator';
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -22,6 +23,9 @@ function App() {
       <UXHeader text={`Counter Example ${counter}`} variant={'hh1'}/>
       <UXButton text={"-"} variant={'primary'} onTap={() => setCounter(counter - 1)}/>
       <UXButton text={"+"} variant={'primary'} onTap={() => setCounter(counter + 1)}/>
+      <hr />
+      <Calculator />
+      <hr />
       <ul>
         {
           empList.map((value, index) => (
