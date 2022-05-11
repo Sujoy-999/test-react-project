@@ -21,7 +21,7 @@ function App() {
       <UXHeader text={"Hello every one"} variant='hh2'/>
       <UXHeader text={"This is Anish dey from earth"} variant='hh3'/>
 
-      <UXButton text={"Click me"} variant={'primary'} onTap={(param) => clickHandler(param)}/>
+      <UXButton text={"Click me"} variant={'danger'} onTap={(param) => clickHandler(param)}/>
       <hr />
       <UXHeader text={`Counter Example ${counter}`} variant={'hh1'}/>
       <UXButton text={"-"} variant={'primary'} onTap={() => setCounter(counter - 1)}/>
