@@ -1,19 +1,16 @@
 import UXHeader from './components/UXHeader/UXHeader';
 import UXButton from './components/UXButton/UXButton';
-import { useState } from 'react';
+import { useState, useReducer } from 'react';
 import './App.css';
 
 function App() {
-  // state = {
-  //   counter: 0
-  // }
-  // setState({counter: counter++});
-
   const [counter, setCounter] = useState(0);
+  const [empList, setempList] = useState(['Anish', 'Indra', 'Sujoy']);
 
   const clickHandler = (source) => {
     console.log('Click......', source);
   }
+
   return (
     <div className="App">
       <UXHeader text={"This is my new header"} variant={'hh1'}/>
@@ -25,6 +22,13 @@ function App() {
       <UXHeader text={`Counter Example ${counter}`} variant={'hh1'}/>
       <UXButton text={"-"} variant={'primary'} onTap={() => setCounter(counter - 1)}/>
       <UXButton text={"+"} variant={'primary'} onTap={() => setCounter(counter + 1)}/>
+      <ul>
+        {
+          empList.map((value, index) => (
+            <li key={index} id={'listItem' + index}>{value}</li>
+          ))
+        }
+      </ul>
     </div>
   );
 }
